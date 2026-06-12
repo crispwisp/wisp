@@ -21,6 +21,7 @@ theme/      omarchy theme (drop into ~/.config/omarchy/themes/wisp)
             includes wisp-wall.py — the wallpapers are procedural, regenerate at will
 config/     fastfetch, starship, tmux, hypr configs
 scripts/    wisp-avatar.py — the avatar is procedural too
+            gh-auth.sh   — authenticate the gh CLI from a token, no browser
 assets/     rendered avatar
 system/     explicitly installed packages (pacman -Qqe)
 ```
