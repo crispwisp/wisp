@@ -1,0 +1,67 @@
+/* wisp — quiet light over marsh-night air */
+@define-color background rgba(10, 15, 20, 0.86);
+@define-color foreground #ccdfdb;
+@define-color glow #8ef0d2;
+@define-color shimmer #b3a6f0;
+@define-color mist #3a4750;
+
+window#waybar {
+  background-color: rgba(10, 15, 20, 0.86);
+  border-bottom: 1px solid rgba(142, 240, 210, 0.18);
+}
+
+#workspaces button {
+  color: @mist;
+  transition: color 0.4s ease;
+}
+
+#workspaces button.empty {
+  opacity: 0.45;
+}
+
+#workspaces button.active {
+  color: @glow;
+  text-shadow: 0 0 6px rgba(142, 240, 210, 0.55);
+}
+
+#workspaces button:hover {
+  color: @shimmer;
+}
+
+#clock {
+  color: @foreground;
+}
+
+#custom-omarchy {
+  color: @glow;
+}
+
+#cpu,
+#battery,
+#network,
+#bluetooth,
+#pulseaudio {
+  color: @mist;
+}
+
+#battery.warning {
+  color: @shimmer;
+}
+
+#battery.critical {
+  color: #e06a8a;
+}
+
+#custom-update {
+  color: @shimmer;
+}
+
+tooltip {
+  background-color: rgba(10, 15, 20, 0.94);
+  border: 1px solid rgba(142, 240, 210, 0.25);
+  border-radius: 8px;
+}
+
+tooltip label {
+  color: @foreground;
+}

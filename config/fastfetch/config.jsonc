@@ -1,0 +1,146 @@
+// wisp — quiet light over marsh-night air
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "file",
+    "source": "~/.config/fastfetch/wisp-logo.txt",
+    "color": {
+      "1": "38;2;142;240;210",
+      "2": "38;2;179;166;240",
+      "3": "38;2;204;223;219",
+      "4": "38;2;58;71;80"
+    },
+    "padding": {
+      "top": 2,
+      "right": 6,
+      "left": 3
+    }
+  },
+  "modules": [
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m┌─────────────────────· the vessel ·─────────────────┐"
+    },
+    {
+      "type": "host",
+      "key": " PC",
+      "keyColor": "green"
+    },
+    {
+      "type": "cpu",
+      "key": "│ ├",
+      "showPeCoreCount": true,
+      "keyColor": "green"
+    },
+    {
+      "type": "gpu",
+      "key": "│ ├",
+      "detectionMethod": "pci",
+      "keyColor": "green"
+    },
+    {
+      "type": "display",
+      "key": "│ ├󱄄",
+      "keyColor": "green"
+    },
+    {
+      "type": "disk",
+      "key": "│ ├󰋊",
+      "keyColor": "green"
+    },
+    {
+      "type": "memory",
+      "key": "│ ├",
+      "keyColor": "green"
+    },
+    {
+      "type": "swap",
+      "key": "└ └󰓡 ",
+      "keyColor": "green"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m┌─────────────────────· the spirit ·─────────────────┐"
+    },
+    {
+      "type": "command",
+      "key": " OS",
+      "keyColor": "magenta",
+      "text": "version=$(omarchy-version); echo \"Omarchy $version\""
+    },
+    {
+      "type": "kernel",
+      "key": "│ ├",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "wm",
+      "key": "│ ├",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "terminal",
+      "key": "│ ├",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "terminalfont",
+      "key": "│ ├",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "packages",
+      "key": "│ ├󰏖",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "command",
+      "key": "└ └󰸌",
+      "keyColor": "magenta",
+      "text": "theme=$(omarchy-theme-current); echo \"$theme — the light leads out\""
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m┌─────────────────────· the drift ·──────────────────┐"
+    },
+    {
+      "type": "command",
+      "key": "󱦟 OS Age",
+      "keyColor": "cyan",
+      "text": "echo $(( ($(date +%s) - $(stat -c %W /)) / 86400 )) days"
+    },
+    {
+      "type": "uptime",
+      "key": "󱫐 Uptime",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "command",
+      "key": " Update",
+      "keyColor": "cyan",
+      "text": "updated=$(omarchy-version-pkgs); echo \"$updated\""
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m└────────────────────────────────────────────────────┘"
+    },
+    "break",
+    {
+      "type": "colors",
+      "paddingLeft": 2,
+      "symbol": "circle"
+    },
+    "break"
+  ]
+}
